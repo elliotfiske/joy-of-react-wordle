@@ -1,6 +1,6 @@
 import React from "react";
 
-function GameInput({ onGuessed }) {
+function GameInput({ onGuessed, guessAllowed }) {
   const [userInput, setUserInput] = React.useState("");
 
   return (
@@ -18,6 +18,7 @@ function GameInput({ onGuessed }) {
         <br />
         <input
           required
+          disabled={!guessAllowed}
           maxLength={5}
           type="text"
           value={userInput}
