@@ -1,6 +1,7 @@
 import React from "react";
+import Keyboard from "../Keyboard";
 
-function GameInput({ onGuessed, guessAllowed }) {
+function GameInput({ onGuessed, guessAllowed, guesses }) {
   const [userInput, setUserInput] = React.useState("");
 
   return (
@@ -27,6 +28,12 @@ function GameInput({ onGuessed, guessAllowed }) {
           title="Five letter word"
         />
       </label>
+      <Keyboard
+        guesses={guesses}
+        onLetterClicked={(letter) => {
+          setUserInput(userInput + letter);
+        }}
+      />
     </form>
   );
 }

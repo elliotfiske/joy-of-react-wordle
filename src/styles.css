@@ -230,3 +230,62 @@ h1 {
     transform: translateY(0%);
   }
 }
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0px;
+  justify-content: center;
+  width: 100%;
+}
+
+.keyboard-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 48px;
+  background-color: darkgrey;
+  border-radius: 4px;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.keyboard-button:hover {
+  background-color: grey;
+}
+
+.keyboard-button.misplaced {
+  background-color: var(--color-warning);
+  color: white;
+}
+
+.keyboard-button.correct {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.keyboard-button.incorrect {
+  background: var(--color-gray-300);
+  color: white;
+}
+
+.new-game-button {
+  border: 1px solid white;
+  padding: 4px;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+
+.new-game-button:hover {
+  background-color: white;
+  color: black;
+}
